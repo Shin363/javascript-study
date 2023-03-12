@@ -15,5 +15,7 @@ function solution(s){
     }
     else if((numP==0)&&(numY==0)){answer=true;}
     else{answer=true;} 
+    
+    //return s.match(/p/ig).length == s.match(/y/ig).length
     return answer;
 }
