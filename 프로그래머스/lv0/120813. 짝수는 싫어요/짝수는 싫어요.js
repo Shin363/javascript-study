@@ -1,13 +1,9 @@
 function solution(n) {
     var answer = [];
-    if(n%2==0){
-        //짝수면
-        n=n-1;
-        while(n>0){answer.push(n);n=n-2;}
+    for(var i = 0; i <= n; i++) {
+        if(i%2 !== 0) { //홀수면 push ... push는 꼬리에 추가된다.
+            answer.push(i);
+        }
     }
-    else{
-        while(n>0){answer.push(n);n=n-2;}
-    }
-    answer.sort(function(a,b){return a-b;})
     return answer;
 }
