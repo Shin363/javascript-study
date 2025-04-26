@@ -1,8 +1,6 @@
 function solution(park, routes) {
-    var backup = [];
     //park에서 출발지 찾기
     var departs = [];
-    var op,n=0;
     for(let i=0; i<park.length; i++){
         for(let j=0; j<park[0].length; j++){
             if(park[i][j]==='S')
@@ -11,9 +9,8 @@ function solution(park, routes) {
     }
     //routes의 방향(op)으로 거리(n)만큼 이동
     for(let i=0; i<routes.length; i++){
-        op=routes[i][0];
-        n=parseInt(routes[i][2]);
-        backup=[departs[0],departs[1]];
+        let [op,n] = routes[i].split(" ");
+        let [startX, startY] = departs;
         for(let j=0; j<n; j++){
             switch(op){
                 case 'N':
@@ -33,9 +30,7 @@ function solution(park, routes) {
             if (departs[0] < 0 || departs[0] >= park.length || departs[1] < 0 || 
                 departs[1] >= park[0].length || park[departs[0]][departs[1]] ===
                 "X") {
-                departs[0] = backup[0];
-                departs[1] = backup[1];
-                backup = [];
+                departs=[startX,startY];
                 break;
             }
         }
