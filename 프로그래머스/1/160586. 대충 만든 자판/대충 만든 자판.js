@@ -5,12 +5,12 @@ function solution(keymap, targets) {
     for(let i=0; i<keymap.length; i++){
         for(let j=0; j<keymap[i].length; j++){
             const key = keymap[i][j]
-            if(nummap[key]===undefined){
+            if(nummap[key]===undefined||nummap[key]>j){
                 nummap[key]=j;
             }
-            else if(nummap[key]>j){
-                nummap[key]=j;
-            }
+            // else if(nummap[key]>j){
+            //     nummap[key]=j;
+            // }
             else{continue;}
         }
     }
