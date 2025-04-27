@@ -8,9 +8,7 @@ function solution(keymap, targets) {
             if(nummap[key]===undefined||nummap[key]>j){
                 nummap[key]=j;
             }
-            // else if(nummap[key]>j){
-            //     nummap[key]=j;
-            // }
+            
             else{continue;}
         }
     }
