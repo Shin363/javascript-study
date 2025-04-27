@@ -1,5 +1,4 @@
 function solution(cards1, cards2, goal) {
-    var answer = '';
     let idx1=0;
     let idx2=0;
     for (word of goal){
