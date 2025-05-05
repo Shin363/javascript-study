@@ -12,5 +12,6 @@ function solution(k, score) {
         }
         answer[i]=Math.min(...scoreArr);
     }
+    //sort 이용해서 풀이해보기
     return answer;
 }
