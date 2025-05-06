@@ -2,8 +2,8 @@ function getDivisorCount(n) {
     let count = 0;
     for (let i = 1; i * i <= n; i++) {
         if (n % i === 0) {
-            count++;                // i는 약수
-            if (i !== n / i) count++; // 짝약수도 추가
+            count++;                
+            if (i !== n / i) count++; 
         }
     }
     return count;
