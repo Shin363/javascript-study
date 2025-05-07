@@ -10,9 +10,11 @@ function solution(food) {
             leftFood+=i.toString().repeat(Math.floor(food[i]/2).toString());
         }
     }
-    for(let j=leftFood.length-1; j>=0; j--){
-        rightFood+=leftFood[j];
-    }
-    answer = leftFood + '0' + rightFood;
+    // for(let j=leftFood.length-1; j>=0; j--){
+    //     rightFood+=leftFood[j];
+    // }
+    // answer = leftFood + '0' + rightFood;
+    rightFood=[...leftFood];
+    answer = leftFood + '0' + rightFood.reverse().join('');
     return answer;
 }
