@@ -7,6 +7,7 @@ function solution(sizes) {
     //     small.push(Math.min(w,h)); 
     // }
     // answer = Math.max(...big) * Math.max(...small);
+    //구조분해할당 신경쓰기
     const rotated = sizes.map(([w,h])=> w>h ? [w,h] : [h,w]);
     
     const widths = rotated.map(([w,h]) => w);
