@@ -5,6 +5,7 @@ function solution(x) {
     for(let i=0; i<tmp.length; i++){
         sum += Number(tmp[i]);
     }
-    answer = x%sum===0 ? true : false;
+    // answer = x%sum===0 ? true : false;
+    if(x%sum!==0){answer=false}
     return answer;
 }
