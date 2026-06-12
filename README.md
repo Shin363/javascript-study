@@ -1,3 +1,1 @@
-# 코딩테스트 연습문제 풀이
-백준, 프로그래머스 문제 풀이 시 자동으로 저장소에 푸시됩니다.
-- 사용 언어 : javascript
+When solving problems, solutions are automatically pushed to the repository. (Language: JavaScript)
