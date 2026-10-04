@@ -10,15 +10,14 @@ function solution(bandage, health, attacks) {
     for(; current_time<=attacks[attacks.length-1][0]; current_time++){
         //공격X
         if(current_time!==attacks[num][0]){
-            current_health = current_health+bandage[1]<=health?
-                current_health+bandage[1]:health;
+            current_health += bandage[1];
             num_success++;
             //연속 성공
             if(num_success==bandage[0]){
-                current_health = current_health+bandage[2]<=health? 
-                    current_health+bandage[2]:health;
+                current_health += bandage[2];
                 num_success = 0;
             }
+            current_health=Math.min(current_health,health);
         }
         //공격O
         else{
